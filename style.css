@@ -1,0 +1,713 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: whitesmoke;
+    font-family: 'League Spartan', sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px 30px;
+    box-shadow: 0 1px 8px #666;
+
+    background-color: #111;
+    z-index: 1000;  
+}
+
+#nav_logo {
+    margin-right: auto;
+}
+
+#nav_logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+#nav_logo a {
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+nav .bi{
+    font-size: 20px;
+    padding-right: 4px;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+}
+nav li {
+    list-style: none;
+    padding: 5px 30px;
+    font-size: 20px;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+#hero-section {
+    position: relative;
+}
+
+#hero-section img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;  
+    display: block;     
+    opacity: 80%;
+}
+
+.hero-content{
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+
+    text-align: center;
+    font-size: 20px;
+    color:white;
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 25px;
+    border-radius: 35px;
+    
+}
+
+.hero-content p{
+    padding-top: 25px;
+}
+
+.breaker {
+    height: 80px;
+    background-color: maroon;
+    margin-bottom: 30px;
+
+}
+
+.about-section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-section h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    padding: 100px 20px;
+}
+
+.feature-card {
+    width: 250px;
+    padding: 20px;
+    background: #111;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/*footer*/
+.site-footer {
+    background-color: #111;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 28px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.footer-text {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.footer-links a:hover {
+    color: maroon;
+}
+
+.footer-bottom {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/*SHOP.HTML*/
+
+.category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px;
+}
+
+.categ-card{
+    width: 45%;
+    height: 250px;
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.categ-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.categ-card h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+.categ-card::before{
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#shop-hero {
+    position: relative;
+}
+
+#shop-hero img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;  
+    display: block;     
+    opacity: 80%;
+}
+
+.hero-content a{
+    text-decoration:none;
+    color: white;
+}
+
+/*quiz.html*/
+#bodyquiz{
+    background-image: url("quizhero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.quiz-section{
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #dcdcdc;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.quiz-section h1{
+    text-align: center;
+    
+}
+
+.question{
+    margin-bottom: 40px;
+}
+.question h2{
+    padding: 20px;
+    text-align: center;
+}
+.choices{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.option{
+    width: 220px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.option input{
+    display: none;
+}
+
+.option img{
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    transition: 0.2s;
+}
+
+.option input:checked + img{
+    border-color: maroon;
+    transform: scale(1.03);
+}
+
+.option p{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+button{
+    display: block;
+    margin: 40px auto;
+    padding: 12px 30px;
+    background: maroon;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(105, 0, 0);
+}
+
+#resultBox{
+    display: none;
+    position: fixed;
+
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 350px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+    z-index: 1000;
+}
+
+#resultBox a{
+    color: maroon;
+    text-decoration: none;
+}
+/* CONTACT */
+
+.contact-sec{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:40px 20px;
+
+    background-image: url("contacthero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-form{
+    width:100%;
+    max-width:500px;
+    background:#fff;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.contact-form h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.contact-form label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-top:8px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    box-sizing:border-box;
+    font-size:16px;
+    font-family:inherit;
+}
+
+.contact-form textarea{
+    resize:vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:maroon;
+    box-shadow:0 0 5px rgba(128,0,0,.3);
+}
+
+.contact-form input[type="submit"]{
+    margin-top:25px;
+    background:maroon;
+    color:white;
+    border:none;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.contact-form input[type="submit"]:hover{
+    background:#5f0000;
+}
+/*shop-categ.html*/
+.categ-hero a{
+    text-decoration: none;
+    color: #111;
+    
+}
+
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:40px;
+}
+
+.product-card{
+    width:220px;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    cursor:pointer;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+.product-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.product-card h3,
+.product-card p{
+    padding:10px;
+    text-align:center;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal-content{
+    width:400px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    position:relative;
+}
+
+.modal-content img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.modal button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:maroon;
+    color:white;
+    cursor:pointer;
+}
+
+#modalLink{
+    text-decoration: none;
+}
+
+/*Tablet*/
+@media (max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    nav li{
+        padding:5px 10px;
+        font-size:18px;
+    }
+
+    #nav_logo{
+        margin-right:0;
+    }
+
+    .hero-content{
+        width:70%;
+        left:50%;
+        transform:translateX(-50%);
+        top:30%;
+        height:auto;
+        font-size:18px;
+    }
+
+    .category{
+        padding:30px;
+    }
+
+    .categ-card{
+        width:100%;
+    }
+
+    .products{
+        justify-content:center;
+    }
+
+    .product-card{
+        width:45%;
+    }
+
+    .quiz-section{
+        width:90%;
+    }
+
+    .option{
+        width:180px;
+    }
+
+    .option img{
+        width:180px;
+        height:240px;
+    }
+
+    .features{
+        gap:40px;
+    }
+
+    .feature-card{
+        width:220px;
+    }
+
+    .modal-content{
+        width:90%;
+    }
+
+    .modal-content img{
+        height:350px;
+    }
+}
+
+/*Mobile PHone*/
+
+/* ===========================
+   MOBILE (480px and below)
+=========================== */
+
+@media (max-width:480px){
+
+    nav{
+        padding:15px;
+    }
+
+    #nav_logo a{
+        font-size:32px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    nav li{
+        padding:8px 0;
+        font-size:17px;
+    }
+
+    .hero-content{
+        width:90%;
+        left:50%;
+        transform:translateX(-50%);
+        top:25%;
+        padding:20px;
+        border-radius:20px;
+        font-size:15px;
+    }
+
+    .hero-content h1{
+        font-size:28px;
+    }
+
+    .about-section h1{
+        font-size:32px;
+    }
+
+    .about-section p{
+        font-size:16px;
+    }
+
+    .features{
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+    }
+
+    .feature-card{
+        width:90%;
+    }
+
+    .category{
+        padding:20px;
+    }
+
+    .categ-card{
+        width:100%;
+        height:200px;
+    }
+
+    .categ-card h1{
+        font-size:34px;
+    }
+
+    .products{
+        padding:20px;
+    }
+
+    .product-card{
+        width:100%;
+        max-width:320px;
+    }
+
+    .quiz-section{
+        width:95%;
+        padding:20px;
+    }
+
+    .choices{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .option{
+        width:100%;
+    }
+
+    .option img{
+        width:100%;
+        max-width:280px;
+        height:auto;
+    }
+
+    .contact-form{
+        padding:25px;
+    }
+
+    .modal-content{
+        width:90%;
+        padding:15px;
+    }
+
+    .modal-content img{
+        height:250px;
+    }
+
+    #resultBox{
+        width:85%;
+    }
+
+    .footer-links{
+        flex-direction:column;
+        gap:10px;
+    }
+}
