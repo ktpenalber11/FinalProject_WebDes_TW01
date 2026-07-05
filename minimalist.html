@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Shop Minimalist</title>
+    <link rel="icon" type="image/png" href="LOGO.png">
+</head>
+<body>
+    <nav>
+        <h1 id="nav_logo"><a href="#">LalaChe</a></h1>
+        <ul>
+            <li><i class="bi bi-house"></i><a href="index.html">HOME</a></li>
+            <li><i class="bi bi-stars"></i><a href="quiz.html">FIND YOUR STYLE</a></li>
+            <li><i class="bi bi-bag"></i><a href="shop.html">SHOP</a></li>
+            <li><i class="bi bi-telephone-fill"></i><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <section class="categ-hero">
+        <h1><a href="shop.html"><i class="bi bi-caret-left-fill"></i>Back</a></h1>
+    </section>
+
+    <section class="products">
+
+    <div class="product-card" onclick="openModal('Flared-trousers.webp','Flared Trousers','View Style','https://vt.tiktok.com/ZS9MeqRcw6UeD-wAgl4/')">
+        <img src="Flared-trousers.webp" alt="">
+        <h3>Flared Trousers</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('Wide-leg.webp','Wide Leg Pants','View Style','https://vt.tiktok.com/ZS9MeqY6TGQwk-tB66L/')">
+        <img src="Wide-leg.webp" alt="">
+        <h3>Wide Leg Pants</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('vneck.webp','V-neck Long Sleeve','View Style','https://vt.tiktok.com/ZS9MeqHU3YRyF-ILd8f/')">
+        <img src="vneck.webp" alt="">
+        <h3>V-neck Long Sleeve</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('blackpolo.webp','Black Polo','View Style','https://vt.tiktok.com/ZS9Meq4u94Rxx-XlDRI/')">
+        <img src="blackpolo.webp" alt="">
+        <h3>Black Polo</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('vneck-knit.webp','V-Neck Knitted Sleeveless Sweater','View Style','https://vt.tiktok.com/ZS9MebN6GVb9X-XbZLX/')">
+        <img src="vneck-knit.webp" alt="">
+        <h3>V-Neck Knitted Sleeveless Sweater</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('Anti-Radiation Eyeglasses.webp','Anti-Radiation Eyeglasses','View Style','https://vt.tiktok.com/ZS9MebmMKN2xU-MOq64/')">
+        <img src="Anti-Radiation Eyeglasses.webp" alt="">
+        <h3>Anti-Radiation Eyeglasses</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('drawstring-pants.webp','Oversized Hoodie','View Style','https://vt.tiktok.com/ZS9MegLRJr92d-EwbM6/')">
+        <img src="drawstring-pants.webp" alt="">
+        <h3>Drawstring Baggy Pants</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('minbracelet.webp','Minimalist Stainless Bracelet','View Style','https://vt.tiktok.com/ZS9MegkKGbr3v-4YTzi/')">
+        <img src="minbracelet.webp" alt="">
+        <h3>Minimalist Stainless Bracelet</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('clogs.webp','Cork Shoes Clogs','View Style','https://vt.tiktok.com/ZS9MegUDgmoox-U9nDv/')">
+        <img src="clogs.webp" alt="">
+        <h3>Cork Shoes Clogs</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('bnwloafers.webp','Black and White Loafers','View Style','https://vt.tiktok.com/ZS9MegH9HHvMm-zgURZ/')">
+        <img src="bnwloafers.webp" alt="">
+        <h3>Black and White Loafers</h3>
+        <p>Tap to view</p>
+    </div>
+
+<div id="productModal" class="modal">
+
+    <div class="modal-content">
+        <img id="modalImg">
+        <h2 id="modalTitle"></h2>
+        <h3 id="modalPrice"></h3>
+        <a id="modalLink" target="_blank"><button>View Item</button></a>
+    </div>
+</div>
+</section>
+
+    <footer class="site-footer">
+    <div class="footer-content">
+        <h2 class="footer-logo">LalaChe</h2>
+        <p class="footer-text">Find your style. Express your identity.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p class="footer-bottom">© 2026 LalaChe. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
