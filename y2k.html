@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Shop Y2K</title>
+    <link rel="icon" type="image/png" href="LOGO.png">
+</head>
+<body>
+    <nav>
+        <h1 id="nav_logo"><a href="#">LalaChe</a></h1>
+        <ul>
+            <li><i class="bi bi-house"></i><a href="index.html">HOME</a></li>
+            <li><i class="bi bi-stars"></i><a href="quiz.html">FIND YOUR STYLE</a></li>
+            <li><i class="bi bi-bag"></i><a href="shop.html">SHOP</a></li>
+            <li><i class="bi bi-telephone-fill"></i><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+    
+    <section class="categ-hero">
+        <h1><a href="shop.html"><i class="bi bi-caret-left-fill"></i>Back</a></h1>
+    </section>
+
+<section class="products">
+
+    <div class="product-card" onclick="openModal('retroshirt.webp','Retro Shirt','View Style','https://vt.tiktok.com/ZS9MeqAffENGm-l1mKa/')">
+        <img src="retroshirt.webp">
+        <h3>Retro Shirt</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('street8.jpg','Adidas R71','View Style','https://vt.tiktok.com/ZS9MebcWrLw2h-8vjMj/')">
+        <img src="r71 yellow.webp">
+        <h3>Adidas R71</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('washed-blackjeans.webp','Black Washed Jeans','View Style','https://vt.tiktok.com/ZS9MebnVJsEGQ-IMFrI/')">
+        <img src="washed-blackjeans.webp">
+        <h3>Black Washed Jeans</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('washed-bluejeans.webp','Blue Washed Jeans','View Style','https://vt.tiktok.com/ZS9MebpWx4Cdo-fNkbO/')">
+        <img src="washed-bluejeans.webp">
+        <h3>Blue Washed Jeans</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('denimshorts.webp','Denim Shorts','View Style','https://vt.tiktok.com/ZS9MegJPf79o7-mgWev/')">
+        <img src="denimshorts.webp">
+        <h3>Denim Shorts</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('camo-pants.webp','Camou Pants','View Style','https://vt.tiktok.com/ZS9Meb5gVCHb4-mNOsV/')">
+        <img src="camo-pants.webp">
+        <h3>Camou Pants</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('leatherjack.webp','Leather Jacket','View Style','https://vt.tiktok.com/ZS9Meb1wY1HcK-epNpu/')">
+        <img src="leatherjack.webp">
+        <h3>Leather Jacket</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('plaidsleeve.webp','Plaid Short-sleeved Shirt','View Style','https://vt.tiktok.com/ZS9MebpWx4Cdo-fNkbO/')">
+        <img src="plaidsleeve.webp">
+        <h3>Plaid Short-sleeved Shirt</h3>
+        <p>Tap to view</p>
+    </div>
+
+    <div class="product-card" onclick="openModal('blackpolo.webp','Black Polo','View Style','https://vt.tiktok.com/ZS9Meq4u94Rxx-XlDRI/')">
+        <img src="blackpolo.webp" alt="">
+        <h3>Black Polo</h3>
+        <p>Tap to view</p>
+    </div>
+<div id="productModal" class="modal">
+
+    <div class="modal-content">
+        <img id="modalImg">
+        <h2 id="modalTitle"></h2>
+        <h3 id="modalPrice"></h3>
+        <a id="modalLink" target="_blank"><button>View Item</button></a>
+    </div>
+</div>
+</section>
+    <footer class="site-footer">
+    <div class="footer-content">
+        <h2 class="footer-logo">LalaChe</h2>
+        <p class="footer-text">Find your style. Express your identity.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p class="footer-bottom">© 2026 LalaChe. All rights reserved.</p>
+    </div>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
