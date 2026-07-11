@@ -6,71 +6,118 @@ function getResult(){
     let q4 = document.querySelector('input[name="q4"]:checked');
     let q5 = document.querySelector('input[name="q5"]:checked');
 
-    if(!q1 || !q2 || !q3 || !q4 || !q5){
-        document.getElementById("result").innerText = "Please answer all questions!";
+    let answers = [q1, q2, q3, q4, q5];
+
+    let code = "";
+    let answeredCount = 0;
+
+
+    answers.forEach(answer => {
+        if(answer){
+            code += answer.value;
+            answeredCount++;
+        }
+    });
+
+    if(answeredCount < 3){
+
+        document.getElementById("result").innerHTML = `
+        <h1>Not Enough Answers</h1>
+        <p>Please answer at least <strong>3 questions</strong> so we can recommend a style accurately.</p>`;
+
+        document.getElementById("resultBox").style.display = "block";
         return;
     }
 
-    let code = q1.value + q2.value + q3.value + q4.value + q5.value;
-
-    const streetwear = [
-        "AAAAA","AAAAB","AAABA","AABAA","ABAAA"
-    ];
-
-    const minimalist = [
-        "BBBBB","BBBBA","BBABB","BABBB","ABBBA"
-    ];
-
-    const athleisure = [
-        "ABBBB","BABBB","BBBAA","BBBAB"
-    ];
-
-    const business = [
-        "BABAB","BAABB","BBAAA","BBAAB","BBABA"
-    ];
 
 
-    const grunge = [
-        "AAABB","AABAB","AABBA","ABAAB","ABBAA"
-    ];
+    const styles = {
+        "Streetwear": ["AAAAA","AAAAB","AAABA","AABAA","ABAAA"],
 
-    const y2k = [
-        "AABBB","ABBAB","ABABB","BABAA","BAABA"
-    ];
+        "Minimalist": ["BBBBB","BBBBA","BBABB","BABBB","ABBBA"],
+
+        "Athleisure": ["ABBBB","BABBB","BBBAA","BBBAB"],
+
+        "Business Casual": ["BABAB","BAABB","BBAAA","BBAAB","BBABA"],
+
+        "Grunge": ["AAABB","AABAB","AABBA","ABAAB","ABBAA"],
+
+        "Y2K": ["AABBB","ABBAB","ABABB","BABAA","BAABA"]
+    };
 
     let result = "";
+    let highestScore = -1;
 
-    if (streetwear.includes(code)) {
-        result = "Streetwear";
+    for(let style in styles){
+        styles[style].forEach(pattern => {
+
+            let score = 0;
+            let index = 0;
+
+            answers.forEach(answer => {
+                if(answer){
+                    if(answer.value === pattern[index]){
+                        score++;
+                    }
+                    index++;
+                }
+            });
+
+            if(score > highestScore){
+                highestScore = score;
+                result = style;
+            }
+        });
     }
 
-    else if (athleisure.includes(code)) {
-        result = "Athleisure";
-    }
+    let description = "";
 
-    else if (minimalist.includes(code)) {
-        result = "Minimalist";
-    }
+if(result === "Streetwear"){
+    description =
+    "Streetwear represents individuality, comfort, and self-expression. " +
+    "This style focuses on oversized silhouettes, sneakers, graphic pieces, " +
+    "and bold outfits inspired by urban culture.";
+}
 
-    else if (business.includes(code)) {
-        result = "Business Casual";
-    }
+else if(result === "Minimalist"){
+    description = "Minimalist style focuses on simplicity, clean designs, and timeless pieces. " +
+    "You prefer outfits that look polished, balanced, and effortless.";
+}
 
-    else if (grunge.includes(code)) {
-        result = "Grunge";
-    }
+else if(result === "Athleisure"){
+    description = "Athleisure combines comfort and fashion through sporty-inspired outfits. " +
+    "This style values movement, practicality, and a relaxed appearance.";
+}
 
-    else if (y2k.includes(code)) {
-        result = "Y2K";
-    }
+else if(result === "Business Casual"){
+    description = "Business Casual blends professionalism with modern fashion. " +
+    "This style uses structured pieces while keeping outfits comfortable and stylish.";
+}
 
-    else {
-        result = "Closest match: Minimalist";
-    }
+else if(result === "Grunge"){
+    description = "Grunge reflects an edgy and rebellious personality. " +
+    "It combines layered clothing, darker tones, and vintage-inspired pieces.";
+}
 
-    document.getElementById("result").innerText =
-        "Your style is: " + result;
-    document.getElementById("resultBox").style.display = "block";
+else if(result === "Y2K"){
+    description = "Y2K fashion embraces creativity, bold choices, and nostalgic trends. " +
+    "This style combines playful colors, unique accessories, and expressive outfits.";
+}
+
+document.getElementById("result").innerHTML = `
+    <h1>${result}</h1>
+    <p>${description}</p>
+
+    <button onclick="location.href='shop.html'">Explore Your Style</button>
+`;
+
+document.getElementById("quizSection").style.display = "none";
+document.getElementById("resultBox").style.display = "block";
+
+window.scrollTo({
+    top: document.getElementById("resultBox").offsetTop,
+    behavior: "smooth"
+});
 }
 
 function closePopup(){
@@ -96,3 +143,12 @@ window.onclick = function (event) {
         closeModal();
     }
 };
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if(menuToggle){
+    menuToggle.onclick = function(){
+        navLinks.classList.toggle("show");
+    }
+}
