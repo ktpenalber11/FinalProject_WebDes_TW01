@@ -340,6 +340,10 @@ nav li a.active{
     padding: 50px;
 }
 
+.categ-hero{
+    position: sticky;
+}
+
 .categ-card{
     width: 45%;
     height: 250px;
